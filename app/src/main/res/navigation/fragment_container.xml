@@ -1,0 +1,29 @@
+<!-- res/navigation/nav_graph.xml -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.chafersch.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.chafersch.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.chafersch.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite">
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.chafersch.ShoppingFragment"
+        android:label="Shopping"
+        tools:layout="@layout/fragment_shopping">
+    </fragment>
+</navigation>

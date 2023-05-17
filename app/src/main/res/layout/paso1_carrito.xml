@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <include
+        android:id="@+id/toolbar_principal"
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <!-- Contenedor para las imágenes -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_principal"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <!-- Texto de Carrito  -->
+        <!-- Texto de los pasos por los que va el usuario -->
+        <TextView
+            android:id="@+id/carrito_paso_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Paso 1 de 3"
+            android:textColor="#F8F5F5"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/carrito_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Carrito"
+            android:textColor="#F8F5F5"
+            android:textSize="24sp" />
+        <!-- Texto de Resumen del pedido  -->
+        <TextView
+            android:id="@+id/resumen_pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Resumen del pedido:"
+            android:textColor="#F8F5F5"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="347dp"
+            android:layout_height="336dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+                <!-- Imagen donde encontamos el borde donde esta el segundo producto  -->
+                <ImageView
+                    android:id="@+id/borde_pedido1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/borde" />
+
+                <ImageView
+                    android:id="@+id/imagen_pedido"
+                    android:layout_width="237dp"
+                    android:layout_height="208dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@+id/linear_pedido1" />
+
+                <LinearLayout
+                    android:id="@+id/linear_pedido1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <!-- Precio del producto  -->
+                        <TextView
+                            android:id="@+id/Marca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Marca:"
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/txt_marca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text=""
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <!-- Precio del producto  -->
+                        <TextView
+                            android:id="@+id/Nombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Nombre:"
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/txt_nombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text=""
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <!-- Precio del producto  -->
+                        <TextView
+                            android:id="@+id/Precio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Precio:"
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/txt_precio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text=""
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <!-- Precio del producto  -->
+                        <TextView
+                            android:id="@+id/Talla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Talla:"
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/txt_talla"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text=""
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <!-- Precio del producto  -->
+                        <TextView
+                            android:id="@+id/Cantidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Cantidad:"
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/txt_cantidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text=""
+                            android:textColor="#F8F5F5"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_above="@+id/bottomNavigationView"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!-- Boton de siguiente  -->
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#282A2B"
+                android:fontFamily="@font/oswald_bold"
+                android:gravity="bottom"
+                android:text="Siguiente"
+                android:textColor="#FFFBFE" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF0BC7"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_item" />
+</RelativeLayout>

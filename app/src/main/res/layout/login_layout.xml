@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="434dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo_burguer_azul_retro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="450dp"
+            android:backgroundTint="@color/purple_200"
+            android:drawableStart="@color/black"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            android:textColor="#E6E3E4"
+            android:textColorLink="#E91E63" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/teal_200"
+            android:drawableBottom="@color/purple_200"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="#E1D9D9" />
+
+        <Button
+            android:id="@+id/inicio_sesion"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="135dp"
+            android:backgroundTint="#333637"
+            android:text="Iniciar Sesion"
+            android:textColor="#F1EAEA" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#333637"
+                android:text="Google"
+                android:textColor="#EFE8E8" />
+
+            <Button
+                android:id="@+id/registro_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#333637"
+                android:text="Registrarse"
+                android:textColor="#EFE8E8" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

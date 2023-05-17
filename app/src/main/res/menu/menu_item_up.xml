@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/back"
+        android:fontFamily="@font/aclonica"
+        android:icon="@drawable/baseline_arrow_back_24"
+        android:title=""
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/drawer"
+        android:fontFamily="@font/oswald"
+        android:title=""
+        android:icon="@drawable/baseline_toc_24"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/user"
+        android:title="user"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageView" type="id" />
+    <item name="textViewCodigo" type="id" />
+    <item name="textViewNombre" type="id" />
+    <item name="textViewPrecio" type="id" />
+    <item name="textViewStock" type="id" />
+    <item name="textViewTalla" type="id" />
+    <item name="textviewCategoria" type="id" />
+    <item name="deporte_layout" type="id" />
+    <item name="imageListView" type="id" />
+</resources>

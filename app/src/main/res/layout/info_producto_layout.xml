@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+    <!-- Barra de navegación superior -->
+    <include
+        android:id="@+id/toolbar_principal"
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <RelativeLayout
+        android:id="@+id/Linear_nombreTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_principal">
+
+        <TextView
+            android:id="@+id/marcaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_bold"
+            android:layout_marginStart="10dp"
+            android:text="Marca"
+            android:layout_alignParentStart="true"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/nombreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_bold"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/marcaTextView"
+            android:text="Nombre"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/Linear_nombreTextView"
+        android:layout_above="@id/bottomNavigationView">
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!-- Imagen donde encontamos el borde donde esta el primer producto  -->
+                <ImageView
+                    android:id="@+id/producto_delante"
+                    android:layout_width="250dp"
+                    android:layout_height="208dp"
+                    android:layout_marginRight="25dp"
+                    app:srcCompat="@drawable/borde_2" />
+
+                <ImageButton
+                    android:id="@+id/fav_vacio"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/heart" />
+
+                <ImageButton
+                    android:id="@+id/fav_relleno"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/heart_rellenado"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tallas"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:fontFamily="@font/oswald_bold"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <RadioButton
+                    android:id="@+id/radiobtn1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:text="38,5"/>
+                <RadioButton
+                    android:id="@+id/radiobtn2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:text="39"/>
+                <RadioButton
+                    android:id="@+id/radiobtn3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:text="40"/>
+                <RadioButton
+                    android:id="@+id/radiobtn4"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:text="41"/>
+                <RadioButton
+                    android:id="@+id/radiobtn5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:text="42"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/CntPrt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="Cantidad"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <Spinner
+                    android:id="@+id/cantidadSpinner"
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Cantidad"
+                    android:backgroundTint="@color/white"
+                    android:textAlignment="center"
+                    android:entries="@array/cantidad_array" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="Precio Total"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/precioTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/oswald_bold"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavigationView"
+            android:layout_below="@+id/CntPrt"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/agregarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="AÑADIR AL CARRITO" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFF0BC7"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_item" />
+</RelativeLayout>

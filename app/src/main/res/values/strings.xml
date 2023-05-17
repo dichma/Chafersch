@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Chafersch</string>
+    <string name="image_description">Descripción de la imagen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_blank_fragment">Hello this is the home_fragment</string>
+    <string name="search_blank_fragment">Hello this is the search_fragment</string>
+    <string name="favorites_blank_fragment">Hello this is the favorites_fragment</string>
+    <string name="shop_blank_fragment">Hello this is the shop_fragment</string>
+    <string-array name="cantidad_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>

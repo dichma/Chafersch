@@ -1,0 +1,113 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required by Firebase Authentication -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_burguer_azul_retro"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Chafersch">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DeporteActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SandaliasActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".OfertasActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".NovedadesActivity"
+            android:exported="true">
+        </activity>
+
+        ///////////////////////////////////
+
+        <activity
+            android:name=".HomeFragment"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name=".SearchFragment"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name=".FavoriteFragment"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".EditPerfil"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".ShoppingFragment"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name=".InfoProducto"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Pedido"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Paso1CarritoActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Paso2CarritoActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Paso3CarritoActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:parentActivityName=".LoginActivity">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+</manifest>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+        <!-- Barra de navegación superior -->
+        <include
+            android:id="@+id/toolbar_principal"
+            layout="@layout/toolbar"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-1dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_principal"
+            android:layout_above="@id/bottomNavigationView"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/user" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:textStyle="bold"
+                    android:text="Correo electrónico"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+                <EditText
+                    android:id="@+id/edtxt_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    android:background="#3B3939" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="Usuario"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+                <EditText
+                    android:id="@+id/edtxt_user"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:layout_height="34dp"
+                    android:background="#3B3939" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/guardar_cambios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/pink"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/oswald_bold"
+                    android:textStyle="bold"
+                    android:text="Guardar cambios" />
+                <Button
+                    android:id="@+id/cerrar_sesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/pink"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/oswald_bold"
+                    android:textStyle="bold"
+                    android:text="Cerrar sesión" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF0BC7"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_item" />
+    </RelativeLayout>

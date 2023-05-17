@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Barra de navegación superior -->
+    <include
+        android:id="@+id/toolbar_principal"
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_principal"
+        android:orientation="vertical">
+
+            <!-- Texto de los pasos por los que va el usuario -->
+            <TextView
+                android:id="@+id/carrito_paso_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Paso 3 de 3"
+                android:textColor="#F8F5F5"
+                android:textSize="16sp" />
+
+            <!-- Titulo (Sus datos) -->
+
+            <TextView
+                android:id="@+id/sus_datos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Formas de pago"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <!-- Titulo (Formas de envio) -->
+
+            <TextView
+                android:id="@+id/Formas_de_envio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Metodos de envio:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/radio_group_metodos_envio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_button_seur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/seur" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_mrw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/mrw" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Formas_de_pago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/LinearLayout2"
+        android:fontFamily="@font/oswald_bold"
+        android:text="Metodos de pago:"
+        android:textColor="#F8F5F5"
+        android:textSize="24sp" />
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/Formas_de_pago"
+        android:orientation="vertical">
+        <!-- Titulo (Formas de pago) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <RadioGroup
+                android:id="@+id/radio_group_metodos_pago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/radio_button_tarjeta"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radio_button_visa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/visa" />
+                <RadioButton
+                    android:id="@+id/radio_button_paypal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/paypal" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Barra de navegación inferior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF0BC7"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_item" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/LinearLayout3"
+        android:layout_above="@id/bottomNavigationView"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#282A2B"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Realizar Compra"
+            android:textColor="#FFFBFE" />
+    </LinearLayout>
+</RelativeLayout>

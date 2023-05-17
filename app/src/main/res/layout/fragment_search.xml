@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- Contenedor para las imágenes -->
+
+    <LinearLayout
+        android:layout_below="@id/toolbar_principal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+            <!-- Buscador -->
+            <RelativeLayout
+                android:id="@+id/nombreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <EditText
+                    android:id="@+id/buscador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/borde"
+                    android:backgroundTint="#575555"
+                    android:minWidth="376dp"
+                    android:minHeight="36dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_alignRight="@id/buscador"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+                    <!-- Imagen de la lupa-->
+                    <ImageButton
+                        android:id="@+id/btnSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right"
+                        android:backgroundTint="#00FFFFFF"
+                        app:srcCompat="@drawable/busqueda" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- Texto (Buscado recientemente)-->
+            <TextView
+                android:id="@+id/busqueda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Resultados de tu búsqueda:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buscado_recientemente"
+            android:layout_margin="5dp">
+            <!-- RecyclerView para mostrar los resultados de búsqueda -->
+            <androidx.recyclerview.widget.RecyclerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rvResultados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

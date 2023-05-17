@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Barra de navegación superior -->
+    <include
+        android:id="@+id/toolbar_principal"
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_principal"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <!-- Texto de los pasos por los que va el usuario -->
+        <TextView
+            android:id="@+id/carrito_paso_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Paso 2 de 3"
+            android:textColor="#F8F5F5"
+            android:textSize="16sp" />
+
+        <!-- Titulo (Sus datos) -->
+        <TextView
+            android:id="@+id/sus_datos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Sus datos"
+            android:textColor="#F8F5F5"
+            android:textSize="24sp" />
+        <!-- Linea horizontal -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/sus_datos"
+            android:layout_marginTop="10dp"
+            android:background="#F8F5F5" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+            <!-- Titulo (Nombre) -->
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Nombre:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/f_nombre"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LinearApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Titulo (Apellidos) -->
+            <TextView
+                android:id="@+id/apellidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Apellidos:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/f_apellidos"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/borde" />
+        </LinearLayout>
+    </LinearLayout>
+        <!-- Titulo (E-mail) -->
+        <TextView
+            android:id="@+id/e_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_below="@+id/linearLayout2"
+            android:fontFamily="@font/oswald_bold"
+            android:text="E-mail:"
+            android:textColor="#F8F5F5"
+            android:textSize="24sp" />
+        <EditText
+            android:id="@+id/edtxt_email"
+            android:layout_width="387dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_below="@+id/e_mail"
+            android:background="@drawable/borde" />
+
+        <!-- Titulo (Direccion de envio) -->
+        <TextView
+            android:id="@+id/direccion_envio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_below="@+id/edtxt_email"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Direccion de envio:"
+            android:textColor="#F8F5F5"
+            android:textSize="24sp" />
+
+        <!-- Titulo (NIF) -->
+        <TextView
+            android:id="@+id/nif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_below="@+id/direccion_envio"
+            android:fontFamily="@font/oswald_bold"
+            android:text="NIF:"
+            android:textColor="#F8F5F5"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/edtxt_nif"
+            android:layout_width="387dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_below="@+id/nif"
+            android:background="@drawable/borde" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_below="@+id/edtxt_nif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+        <!-- Titulo (Direccion) -->
+            <TextView
+                android:id="@+id/direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Direccion:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/f_direccion_envio"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+            <!-- Titulo (Codigo postal) -->
+            <TextView
+                android:id="@+id/codigo_postal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Codigo postal:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/f_codigo_postal"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/form_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/linearLayout3">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+            <!-- Titulo (Pais) -->
+            <TextView
+                android:id="@+id/pais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Pais:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/f_pais"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+            <!-- Titulo (Telefono) -->
+            <TextView
+                android:id="@+id/telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Telefono:"
+                android:textColor="#F8F5F5"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/f_telefono"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde" />
+        </LinearLayout>
+    </LinearLayout>
+        <!-- Boton de siguiente  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/form_5"
+        android:layout_above="@+id/bottomNavigationView"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_Siguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#282A2B"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Siguiente"
+            android:textColor="#FFFBFE" />
+    </LinearLayout>
+    <!-- Barra de navegación inferior -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF0BC7"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_item" />
+</RelativeLayout>
